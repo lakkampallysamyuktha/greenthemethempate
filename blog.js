@@ -233,3 +233,12 @@ filterBtns.forEach(btn => {
         if (e.key === 'Enter') validateAndRedirect(e);
     });
 })();
+// Clear footer newsletter input on page load (including back/forward navigation)
+window.addEventListener('pageshow', () => {
+    const newsletterInput = document.querySelector('.footer-newsletter input[type="email"]');
+    if (newsletterInput) newsletterInput.value = '';
+});
+document.addEventListener('DOMContentLoaded', () => {
+    const newsletterInput = document.querySelector('.footer-newsletter input[type="email"]');
+    if (newsletterInput) newsletterInput.value = '';
+});
