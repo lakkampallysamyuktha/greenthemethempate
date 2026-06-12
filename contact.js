@@ -1,5 +1,5 @@
 /* ============================================
-   contact.js — GreenEnergy Contact Page (redirects to 404 after submit)
+   contact.js — GreenEnergy Contact Page (redirect to 404 on success)
    ============================================ */
 
 const navbar = document.getElementById('navbar');
@@ -92,7 +92,7 @@ const revealObs = new IntersectionObserver((entries) => {
 }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 revealEls.forEach(el => revealObs.observe(el));
 
-// Contact form – redirect to 404.html after successful submit
+// ===== CONTACT FORM – redirect to 404.html after successful submit (clear form before redirect) =====
 (function () {
     const form = document.getElementById('contactForm');
     const statusEl = document.getElementById('formStatus');
@@ -123,11 +123,14 @@ revealEls.forEach(el => revealObs.observe(el));
         submitBtn.disabled = true;
         submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending…';
         setTimeout(() => {
-            // Redirect to 404.html after successful submission
+            // Reset form fields so they vanish before redirect (in case user returns via back button)
+            form.reset();
+            // Redirect to 404.html
             window.location.href = '404.html';
         }, 800);
     });
 })();
+
 // ===== FOOTER NEWSLETTER – redirect to 404.html on success, error below field =====
 (function() {
     const footerNewsletter = document.querySelector('.footer-newsletter');
@@ -138,7 +141,6 @@ revealEls.forEach(el => revealObs.observe(el));
 
     if (!emailInput || !submitBtn) return;
 
-    // Create or get message container below the newsletter row
     let msgDiv = footerNewsletter.parentNode.querySelector('.footer-newsletter-message');
     if (!msgDiv) {
         msgDiv = document.createElement('div');
