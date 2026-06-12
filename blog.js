@@ -122,8 +122,15 @@ const revealObs = new IntersectionObserver((entries) => {
 }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 revealEls.forEach(el => revealObs.observe(el));
 
+// ===== FILTER BUTTONS – redirect to 404.html =====
+const filterBtns = document.querySelectorAll('.filter-btn');
+filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        window.location.href = '404.html';
+    });
+});
 
-// ===== SIDEBAR NEWSLETTER (Weekly Newsletter widget) =====
+// ===== SIDEBAR NEWSLETTER (Weekly Newsletter widget) – red error below field, redirect on success =====
 (function() {
     const sidebarWidget = document.querySelector('.sidebar-widget.bg-widget');
     if (!sidebarWidget) return;
@@ -133,46 +140,49 @@ revealEls.forEach(el => revealObs.observe(el));
 
     if (!emailInput || !submitBtn) return;
 
-    let msgDiv = sidebarWidget.querySelector('.newsletter-message-sidebar');
+    // Create message container below the button
+    let msgDiv = sidebarWidget.querySelector('.newsletter-sidebar-message');
     if (!msgDiv) {
         msgDiv = document.createElement('div');
-        msgDiv.className = 'newsletter-message-sidebar';
+        msgDiv.className = 'newsletter-sidebar-message';
         msgDiv.style.fontSize = '0.75rem';
         msgDiv.style.marginTop = '10px';
         msgDiv.style.textAlign = 'center';
-        const buttonParent = submitBtn.parentNode;
-        buttonParent.insertAdjacentElement('afterend', msgDiv);
+        submitBtn.parentNode.insertAdjacentElement('afterend', msgDiv);
     }
 
-    function showSidebarMessage(msg, isError = true) {
+    function showError(msg) {
         msgDiv.textContent = msg;
-        msgDiv.style.color = isError ? '#f87171' : '#4ade80';
+        msgDiv.style.color = '#f87171';
         setTimeout(() => { msgDiv.textContent = ''; }, 3000);
     }
 
-    function validateSidebarNewsletter(e) {
+    function validateSidebarAndRedirect(e) {
         e.preventDefault();
         const email = emailInput.value.trim();
+
         if (!email) {
-            showSidebarMessage('Please enter your email address', true);
+            showError('Please enter your email address');
             emailInput.focus();
             return;
         }
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-            showSidebarMessage('Please enter a valid email address', true);
+            showError('Please enter a valid email address');
             emailInput.focus();
             return;
         }
-        showSidebarMessage('✓ Subscribed successfully! Check your inbox soon.', false);
-        emailInput.value = '';
+
+        // Direct redirect to 404.html
+        window.location.href = '404.html';
     }
 
-    submitBtn.addEventListener('click', validateSidebarNewsletter);
+    submitBtn.addEventListener('click', validateSidebarAndRedirect);
     emailInput.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') validateSidebarNewsletter(e);
+        if (e.key === 'Enter') validateSidebarAndRedirect(e);
     });
 })();
-// ===== FOOTER NEWSLETTER – redirect to 404.html on success, error below field =====
+
+// ===== FOOTER NEWSLETTER – red error below field, redirect on success =====
 (function() {
     const footerNewsletter = document.querySelector('.footer-newsletter');
     if (!footerNewsletter) return;
@@ -182,7 +192,7 @@ revealEls.forEach(el => revealObs.observe(el));
 
     if (!emailInput || !submitBtn) return;
 
-    // Create or get message container below the newsletter row
+    // Create message container below the newsletter row
     let msgDiv = footerNewsletter.parentNode.querySelector('.footer-newsletter-message');
     if (!msgDiv) {
         msgDiv = document.createElement('div');
@@ -214,7 +224,7 @@ revealEls.forEach(el => revealObs.observe(el));
             return;
         }
 
-        // Valid email → redirect to 404.html
+        // Direct redirect to 404.html
         window.location.href = '404.html';
     }
 
