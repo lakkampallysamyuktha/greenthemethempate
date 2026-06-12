@@ -447,6 +447,19 @@ a { text-decoration:none; color:inherit; }
     max-width: 860px;
     margin: 0 auto;
 }
+
+/* === FIX: Canvas positioning (no extra space) === */
+.hero-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 2;
+    pointer-events: none;
+}
+
 .about-eyebrow {
     display: inline-flex;
     align-items: center;
