@@ -130,7 +130,7 @@ filterBtns.forEach(btn => {
     });
 });
 
-// ===== SIDEBAR NEWSLETTER (Weekly Newsletter widget) – red error below field, redirect on success =====
+// ===== SIDEBAR NEWSLETTER (Weekly Newsletter widget) – clear input, then redirect =====
 (function() {
     const sidebarWidget = document.querySelector('.sidebar-widget.bg-widget');
     if (!sidebarWidget) return;
@@ -172,6 +172,8 @@ filterBtns.forEach(btn => {
             return;
         }
 
+        // Clear the input field before redirect
+        emailInput.value = '';
         // Direct redirect to 404.html
         window.location.href = '404.html';
     }
@@ -182,7 +184,7 @@ filterBtns.forEach(btn => {
     });
 })();
 
-// ===== FOOTER NEWSLETTER – red error below field, redirect on success =====
+// ===== FOOTER NEWSLETTER – clear input, then redirect =====
 (function() {
     const footerNewsletter = document.querySelector('.footer-newsletter');
     if (!footerNewsletter) return;
@@ -224,6 +226,8 @@ filterBtns.forEach(btn => {
             return;
         }
 
+        // Clear the input field before redirect
+        emailInput.value = '';
         // Direct redirect to 404.html
         window.location.href = '404.html';
     }
@@ -233,12 +237,13 @@ filterBtns.forEach(btn => {
         if (e.key === 'Enter') validateAndRedirect(e);
     });
 })();
-// Clear footer newsletter input on page load (including back/forward navigation)
-window.addEventListener('pageshow', () => {
-    const newsletterInput = document.querySelector('.footer-newsletter input[type="email"]');
-    if (newsletterInput) newsletterInput.value = '';
-});
-document.addEventListener('DOMContentLoaded', () => {
-    const newsletterInput = document.querySelector('.footer-newsletter input[type="email"]');
-    if (newsletterInput) newsletterInput.value = '';
-});
+
+// ===== Clear all newsletter inputs on page load (including back/forward navigation) =====
+function clearAllNewsletterInputs() {
+    document.querySelectorAll('.footer-newsletter input[type="email"], .sidebar-newsletter input[type="email"]').forEach(input => {
+        if (input) input.value = '';
+    });
+}
+
+window.addEventListener('pageshow', () => clearAllNewsletterInputs());
+document.addEventListener('DOMContentLoaded', () => clearAllNewsletterInputs());
