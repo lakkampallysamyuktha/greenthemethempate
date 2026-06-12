@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Stackly</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="services.css">
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="logo-removebg-preview.webp" alt="Stackly" class="nav-logo-img">
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="nav-btn-login">Login</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="ham-line ham-top"></span>
+                <span class="ham-line ham-mid"></span>
+                <span class="ham-line ham-bot"></span>
+            </button>
+        </div>
+        <div class="nav-overlay" id="navOverlay"></div>
+    </nav>
+
+    <main style="position:relative; z-index:0;">
+
+    <!-- ===== HERO ===== -->
+    <section class="services-hero-full">
+        <div class="services-hero-overlay"></div>
+        <canvas class="hero-canvas" id="heroCanvas"></canvas>
+        <div class="services-hero-content">
+            <span class="services-eyebrow">
+                <span class="eyebrow-dot"></span>
+                What We Offer
+            </span>
+            <h1>Comprehensive <em>Energy</em><br>Solutions for Everyone</h1>
+            <p>From initial consultation to lifelong maintenance, we provide end‑to‑end renewable energy services for homes, businesses, and communities.</p>
+            <div class="services-hero-stats">
+                <div class="ahs-item" data-count="4" data-suffix="+">
+                    <strong class="counter">0</strong>
+                    <span>Energy Types</span>
+                </div>
+                <div class="ahs-divider"></div>
+                <div class="ahs-item" data-count="500" data-suffix="+">
+                    <strong class="counter">0</strong>
+                    <span>Projects Completed</span>
+                </div>
+                <div class="ahs-divider"></div>
+                <div class="ahs-item" data-count="98" data-suffix="%">
+                    <strong class="counter">0</strong>
+                    <span>Client Satisfaction</span>
+                </div>
+                <div class="ahs-divider"></div>
+                <div class="ahs-item" data-count="25" data-suffix="yr">
+                    <strong class="counter">0</strong>
+                    <span>Warranty</span>
+                </div>
+            </div>
+        </div>
+        <div class="services-hero-scroll">
+            <span>Scroll</span>
+            <div class="scroll-arrow">
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== DETAILED SERVICES ===== -->
+    <section class="detailed-services">
+        <div class="container">
+
+            <div class="service-detail-row reveal-up">
+                <div class="service-detail-img">
+                    <img src="services1.webp" alt="Solar Panels" loading="lazy">
+                </div>
+                <div class="service-detail-content">
+                    <div class="service-icon"><i class="fa-solid fa-sun"></i></div>
+                    <h2>Solar Energy Systems</h2>
+                    <p>We design and install high-efficiency solar photovoltaic (PV) systems. By utilizing top‑tier monocrystalline panels and smart microinverters, our systems guarantee maximum power output even in low‑light conditions.</p>
+                    <ul class="service-features">
+                        <li><i class="fa-solid fa-check"></i> Residential Rooftop Solar</li>
+                        <li><i class="fa-solid fa-check"></i> Commercial &amp; Industrial Installations</li>
+                        <li><i class="fa-solid fa-check"></i> Solar Carports &amp; Canopies</li>
+                        <li><i class="fa-solid fa-check"></i> 25‑Year Performance Warranty</li>
+                    </ul>
+                    <a href="404.html" class="btn btn-primary">Get Solar Quote</a>
+                </div>
+            </div>
+
+            <div class="service-detail-row reverse reveal-up" style="--delay:80ms">
+                <div class="service-detail-img">
+                    <img src="services2.webp" alt="Wind Turbines" loading="lazy">
+                </div>
+                <div class="service-detail-content">
+                    <div class="service-icon"><i class="fa-solid fa-wind"></i></div>
+                    <h2>Wind Power Solutions</h2>
+                    <p>Harness the power of the wind with our advanced turbine technology. We offer solutions ranging from small‑scale micro turbines for agricultural use to utility‑scale onshore and offshore wind farms.</p>
+                    <ul class="service-features">
+                        <li><i class="fa-solid fa-check"></i> Micro‑Turbines (10kW – 100kW)</li>
+                        <li><i class="fa-solid fa-check"></i> Utility‑Scale Wind Farms</li>
+                        <li><i class="fa-solid fa-check"></i> Site Wind‑Resource Assessment</li>
+                        <li><i class="fa-solid fa-check"></i> Predictive Maintenance Programs</li>
+                    </ul>
+                    <a href="404.html" class="btn btn-primary">Discuss Wind Projects</a>
+                </div>
+            </div>
+
+            <div class="service-detail-row reveal-up" style="--delay:160ms">
+                <div class="service-detail-img">
+                    <img src="services3.webp" alt="Hydroelectric Dam" loading="lazy">
+                </div>
+                <div class="service-detail-content">
+                    <div class="service-icon"><i class="fa-solid fa-water"></i></div>
+                    <h2>Hydroelectric Energy</h2>
+                    <p>Reliable, continuous power generation using the natural flow of water. We specialise in run‑of‑the‑river micro‑hydro systems that provide baseline power without the massive environmental footprint of traditional dams.</p>
+                    <ul class="service-features">
+                        <li><i class="fa-solid fa-check"></i> Micro &amp; Pico Hydro Systems</li>
+                        <li><i class="fa-solid fa-check"></i> Flow &amp; Head Feasibility Studies</li>
+                        <li><i class="fa-solid fa-check"></i> Environmental Impact Assessments</li>
+                        <li><i class="fa-solid fa-check"></i> Grid‑tied &amp; Off‑grid Configurations</li>
+                    </ul>
+                    <a href="404.html" class="btn btn-primary">Explore Hydro</a>
+                </div>
+            </div>
+
+            <!-- BATTERY STORAGE -->
+            <div class="service-detail-row reverse reveal-up" style="--delay:240ms">
+                <div class="service-detail-img">
+                    <img src="services4.webp" alt="Battery Storage System" loading="lazy">
+                </div>
+                <div class="service-detail-content">
+                    <div class="service-icon"><i class="fa-solid fa-battery-full"></i></div>
+                    <h2>Battery Storage &amp; Microgrids</h2>
+                    <p>The sun doesn't always shine and the wind doesn't always blow. Our advanced Lithium‑Iron Phosphate (LiFePO4) battery storage systems ensure you have clean power available exactly when you need it.</p>
+                    <ul class="service-features">
+                        <li><i class="fa-solid fa-check"></i> Home Battery Backup</li>
+                        <li><i class="fa-solid fa-check"></i> Commercial Peak Shaving</li>
+                        <li><i class="fa-solid fa-check"></i> Complete Off‑Grid Microgrids</li>
+                        <li><i class="fa-solid fa-check"></i> Smart AI Power Routing</li>
+                    </ul>
+                    <a href="404.html" class="btn btn-primary">Learn About Storage</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== MAINTENANCE PLANS ===== -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="section-header reveal-fade">
+                <span class="section-tag">Support</span>
+                <h2>Operations &amp; <span>Maintenance</span></h2>
+                <p>Ensure your system operates at peak efficiency for decades with our comprehensive maintenance plans.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card reveal-up" style="--delay:0ms">
+                    <h3>Basic Care</h3>
+                    <div class="price"><span>$</span>49<span>/mo</span></div>
+                    <p class="pricing-desc">Perfect for residential solar systems.</p>
+                    <ul class="pricing-features">
+                        <li><i class="fa-solid fa-check"></i> 24/7 Remote Monitoring</li>
+                        <li><i class="fa-solid fa-check"></i> Annual System Inspection</li>
+                        <li><i class="fa-solid fa-check"></i> Firmware Updates</li>
+                        <li class="disabled"><i class="fa-solid fa-xmark"></i> Priority Dispatch</li>
+                        <li class="disabled"><i class="fa-solid fa-xmark"></i> Panel Cleaning</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-outline">Select Plan</a>
+                </div>
+                <div class="pricing-card featured reveal-up" style="--delay:120ms">
+                    <div class="featured-badge">Most Popular</div>
+                    <h3>Premium Care</h3>
+                    <div class="price"><span>$</span>99<span>/mo</span></div>
+                    <p class="pricing-desc">Comprehensive coverage for peace of mind.</p>
+                    <ul class="pricing-features">
+                        <li><i class="fa-solid fa-check"></i> 24/7 Remote Monitoring</li>
+                        <li><i class="fa-solid fa-check"></i> Bi‑Annual System Inspection</li>
+                        <li><i class="fa-solid fa-check"></i> Firmware Updates</li>
+                        <li><i class="fa-solid fa-check"></i> Priority Technician Dispatch</li>
+                        <li><i class="fa-solid fa-check"></i> Annual Panel Cleaning</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary">Select Plan</a>
+                </div>
+                <div class="pricing-card reveal-up" style="--delay:240ms">
+                    <h3>Enterprise Care</h3>
+                    <div class="price">Custom</div>
+                    <p class="pricing-desc">Tailored for large commercial installations.</p>
+                    <ul class="pricing-features">
+                        <li><i class="fa-solid fa-check"></i> Advanced Analytics Dashboard</li>
+                        <li><i class="fa-solid fa-check"></i> Quarterly Inspections</li>
+                        <li><i class="fa-solid fa-check"></i> Dedicated Account Manager</li>
+                        <li><i class="fa-solid fa-check"></i> 4‑Hour Response SLA</li>
+                        <li><i class="fa-solid fa-check"></i> Bi‑Annual Cleaning &amp; Thermal Scan</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-outline">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header reveal-fade">
+                <span class="section-tag">FAQ</span>
+                <h2>Frequently Asked <span>Questions</span></h2>
+                <p>Got questions? We've got answers.</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item reveal-up" style="--delay:0ms">
+                    <div class="faq-icon"><i class="fa-solid fa-clock"></i></div>
+                    <h4>How long does a solar installation take?</h4>
+                    <p>A typical residential installation takes 1‑3 days once permits are approved. The entire process from consultation to turning the system on usually takes 4‑8 weeks depending on your local utility and government permit processing times.</p>
+                </div>
+                <div class="faq-item reveal-up" style="--delay:80ms">
+                    <div class="faq-icon"><i class="fa-solid fa-plug"></i></div>
+                    <h4>Do I still need to be connected to the grid?</h4>
+                    <p>Most of our customers choose a grid‑tied system, allowing them to sell excess power back to the utility company (net metering). However, with our battery storage solutions, complete off‑grid systems are entirely possible.</p>
+                </div>
+                <div class="faq-item reveal-up" style="--delay:160ms">
+                    <div class="faq-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <h4>What happens during a power outage?</h4>
+                    <p>Standard grid‑tied solar systems will automatically shut off during an outage for safety reasons. If you have our battery storage system installed, your home will automatically switch to backup power in milliseconds, keeping your lights on.</p>
+                </div>
+                <div class="faq-item reveal-up" style="--delay:240ms">
+                    <div class="faq-icon"><i class="fa-solid fa-dollar-sign"></i></div>
+                    <h4>Are there financing options available?</h4>
+                    <p>Yes! We offer zero‑down solar loans, leases, and Power Purchase Agreements (PPAs). We also help you navigate and apply for federal and state tax incentives to ensure you get the best financial return on your investment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- ===== FOOTER (logo fixed) ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                      <a href="index.html" class="footer-logo">
+                    <img src="logo-removebg-preview.webp" alt="Stackly" class="footer-logo-img">
+                </a>
+                    <p>Powering a sustainable future with innovative renewable energy solutions since 2009.</p>
+                    <div class="footer-social">
+                        <a href="404.html" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="404.html" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Solar Energy</a></li>
+                        <li><a href="services.html">Wind Energy</a></li>
+                        <li><a href="services.html">Hydro Power</a></li>
+                        <li><a href="services.html">Energy Storage</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Stay updated with Stackly news.</p>
+                    <div class="footer-newsletter">
+                        <input type="email" placeholder="Your email address">
+                        <button type="button" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Stackly. All rights reserved. | <a href="404.html">Privacy Policy</a> | <a href="404.html">Terms</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <script src="services.js"></script>
+</body>
+</html>

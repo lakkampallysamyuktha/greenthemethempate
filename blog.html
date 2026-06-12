@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Blog - Stackly</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+    <img src="logo-removebg-preview.webp" alt="Stackly" class="nav-logo-img">
+</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="nav-btn-login">Login</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="ham-line ham-top"></span>
+                <span class="ham-line ham-mid"></span>
+                <span class="ham-line ham-bot"></span>
+            </button>
+        </div>
+        <div class="nav-overlay" id="navOverlay"></div>
+    </nav>
+
+    <main style="position:relative; z-index:0;">
+
+    <!-- HERO -->
+    <section class="blog-hero-full">
+        <div class="blog-hero-overlay"></div>
+        <canvas class="hero-canvas" id="heroCanvas"></canvas>
+        <div class="blog-hero-content">
+            <span class="blog-eyebrow">
+                <span class="eyebrow-dot"></span>
+                Our Blog
+            </span>
+            <h1>Insights &amp; <em>Innovations</em><br>in Stackly</h1>
+            <p>Stay updated with the latest news in renewable energy, sustainability tips, and updates from the Stackly team.</p>
+            <div class="blog-hero-stats">
+                <div class="ahs-item" data-count="120" data-suffix="+">
+                    <strong class="counter">0</strong>
+                    <span>Articles Published</span>
+                </div>
+                <div class="ahs-divider"></div>
+                <div class="ahs-item" data-count="6" data-suffix="">
+                    <strong class="counter">0</strong>
+                    <span>Categories</span>
+                </div>
+                <div class="ahs-divider"></div>
+                <div class="ahs-item" data-count="50" data-suffix="K+">
+                    <strong class="counter">0</strong>
+                    <span>Monthly Readers</span>
+                </div>
+                <div class="ahs-divider"></div>
+                <div class="ahs-item" data-count="2026" data-suffix="">
+                    <strong class="counter">0</strong>
+                    <span>Est. Year</span>
+                </div>
+            </div>
+        </div>
+        <div class="blog-hero-scroll">
+            <span>Scroll</span>
+            <div class="scroll-arrow">
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED POST -->
+    <section class="featured-post-section">
+        <div class="container">
+            <div class="section-intro reveal-fade">
+                <span class="section-tag">Editor's Pick</span>
+                <h2>Featured <span>Article</span></h2>
+            </div>
+            <div class="featured-post reveal-up">
+                <div class="featured-img">
+                    <img src="blog1.webp" alt="Solar Farm" loading="lazy">
+                    <span class="post-category-badge">Technology</span>
+                    <div class="featured-img-overlay"></div>
+                </div>
+                <div class="featured-content">
+                    <div class="post-meta">
+                        <span><i class="fa-regular fa-calendar"></i> June 5, 2026</span>
+                        <span><i class="fa-regular fa-user"></i> Dr. Michael Chen</span>
+                        <span><i class="fa-regular fa-clock"></i> 8 min read</span>
+                    </div>
+                    <h2><a href="404.html">The Future of Solar: Perovskite Cells Explained</a></h2>
+                    <p>Traditional silicon solar panels have served us well, but a new material called Perovskite is promising to revolutionize the industry by drastically lowering manufacturing costs while increasing efficiency. We dive deep into what this means for the future grid.</p>
+                    <div class="featured-tags">
+                        <span>Solar</span>
+                        <span>Technology</span>
+                        <span>Innovation</span>
+                    </div>
+                    <a href="404.html" class="btn btn-primary">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG GRID + SIDEBAR -->
+    <section class="blog-main">
+        <div class="container">
+            <div class="blog-layout">
+
+                <!-- Posts Grid -->
+                <div>
+                    <div class="blog-grid-header reveal-fade">
+                        <h3>Latest Articles</h3>
+                        <div class="filter-tabs">
+                            <button class="filter-btn active" data-filter="all">All</button>
+                            <button class="filter-btn" data-filter="innovation">Innovation</button>
+                            <button class="filter-btn" data-filter="storage">Storage</button>
+                            <button class="filter-btn" data-filter="sustainability">Sustainability</button>
+                        </div>
+                    </div>
+
+                    <div class="blog-grid" id="blogGrid">
+
+                        <!-- Card 1 -->
+                        <div class="blog-card reveal-up" style="--delay:0ms" data-category="innovation">
+                            <div class="blog-card-img">
+                                <img src="blog2.webp" alt="Wind Turbines" loading="lazy">
+                                <span class="post-category-badge">Innovation</span>
+                            </div>
+                            <div class="blog-card-content">
+                                <div class="post-meta">
+                                    <span><i class="fa-regular fa-calendar"></i> May 28, 2026</span>
+                                    <span><i class="fa-regular fa-clock"></i> 5 min</span>
+                                </div>
+                                <h3><a href="404.html">Offshore Wind: Tapping into Deep Water Potential</a></h3>
+                                <p>Floating wind turbines are unlocking massive energy potential in deep waters where traditional fixed-bottom turbines can't reach.</p>
+                                <div class="card-footer">
+                                    <a href="404.html" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                                    <span class="card-views"><i class="fa-regular fa-eye"></i> 2.4k</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 – BATTERY STORAGE (FIXED IMAGE) -->
+                       <div class="blog-card reveal-up" style="--delay:80ms" data-category="storage">
+    <div class="blog-card-img">
+        <img src="blog3.webp" alt="Modern Battery Storage System" loading="lazy">
+        <span class="post-category-badge">Storage</span>
+    </div>
+                            <div class="blog-card-content">
+                                <div class="post-meta">
+                                    <span><i class="fa-regular fa-calendar"></i> May 15, 2026</span>
+                                    <span><i class="fa-regular fa-clock"></i> 7 min</span>
+                                </div>
+                                <h3><a href="404.html">Solid-State Batteries: The Holy Grail of Storage?</a></h3>
+                                <p>As we transition to 100% renewables, safe and dense energy storage is critical. Solid-state technology might be the answer.</p>
+                                <div class="card-footer">
+                                    <a href="404.html" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                                    <span class="card-views"><i class="fa-regular fa-eye"></i> 3.1k</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="blog-card reveal-up" style="--delay:160ms" data-category="company">
+                            <div class="blog-card-img">
+                                <img src="blog4.webp" alt="Solar Farm Construction" loading="lazy">
+                                <span class="post-category-badge">Company News</span>
+                            </div>
+                            <div class="blog-card-content">
+                                <div class="post-meta">
+                                    <span><i class="fa-regular fa-calendar"></i> April 30, 2026</span>
+                                    <span><i class="fa-regular fa-clock"></i> 4 min</span>
+                                </div>
+                                <h3><a href="404.html">Stackly Reaches 1 Million Installations Globally</a></h3>
+                                <p>A massive milestone for our company and the planet. We've successfully completed over 1 million installations worldwide.</p>
+                                <div class="card-footer">
+                                    <a href="404.html" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                                    <span class="card-views"><i class="fa-regular fa-eye"></i> 5.8k</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="blog-card reveal-up" style="--delay:240ms" data-category="sustainability">
+                            <div class="blog-card-img">
+                                <img src="blog5.webp" alt="Hydroelectric Dam" loading="lazy">
+                                <span class="post-category-badge">Sustainability</span>
+                            </div>
+                            <div class="blog-card-content">
+                                <div class="post-meta">
+                                    <span><i class="fa-regular fa-calendar"></i> April 12, 2026</span>
+                                    <span><i class="fa-regular fa-clock"></i> 6 min</span>
+                                </div>
+                                <h3><a href="404.html">The Rebirth of Micro-Hydro Power in Rural Areas</a></h3>
+                                <p>Small scale run-of-the-river hydro systems are bringing reliable baseline power to remote communities without ecological damage.</p>
+                                <div class="card-footer">
+                                    <a href="404.html" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                                    <span class="card-views"><i class="fa-regular fa-eye"></i> 1.9k</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 5 -->
+                        <div class="blog-card reveal-up" style="--delay:0ms" data-category="innovation">
+                            <div class="blog-card-img">
+                                <img src="blog6.webp" alt="Solar Panels" loading="lazy">
+                                <span class="post-category-badge">Innovation</span>
+                            </div>
+                            <div class="blog-card-content">
+                                <div class="post-meta">
+                                    <span><i class="fa-regular fa-calendar"></i> March 22, 2026</span>
+                                    <span><i class="fa-regular fa-clock"></i> 5 min</span>
+                                </div>
+                                <h3><a href="404.html">Agrivoltaics: Growing Crops Under Solar Panels</a></h3>
+                                <p>A revolutionary dual-use land approach is letting farmers generate electricity while boosting crop yields beneath the panels.</p>
+                                <div class="card-footer">
+                                    <a href="404.html" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                                    <span class="card-views"><i class="fa-regular fa-eye"></i> 2.2k</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 6 -->
+                        <div class="blog-card reveal-up" style="--delay:80ms" data-category="sustainability">
+                            <div class="blog-card-img">
+                                <img src="blog7.webp" alt="Stackly City" loading="lazy">
+                                <span class="post-category-badge">Sustainability</span>
+                            </div>
+                            <div class="blog-card-content">
+                                <div class="post-meta">
+                                    <span><i class="fa-regular fa-calendar"></i> March 10, 2026</span>
+                                    <span><i class="fa-regular fa-clock"></i> 9 min</span>
+                                </div>
+                                <h3><a href="404.html">How Smart Grids Are Transforming Urban Energy</a></h3>
+                                <p>AI-powered grid management is cutting city energy waste by up to 30%, paving the way for a cleaner urban future.</p>
+                                <div class="card-footer">
+                                    <a href="404.html" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                                    <span class="card-views"><i class="fa-regular fa-eye"></i> 4.0k</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div><!-- /blog-grid -->
+
+                    <!-- Pagination -->
+                    <div class="pagination reveal-fade">
+                        <a href="404.html" class="page-link active">1</a>
+                        <a href="404.html" class="page-link">2</a>
+                        <a href="404.html" class="page-link">3</a>
+                        <span class="page-dots">…</span>
+                        <a href="404.html" class="page-link"><i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="blog-sidebar">
+                    <div class="sidebar-widget reveal-up" style="--delay:0ms">
+                        <h3><i class="fa-solid fa-magnifying-glass"></i> Search</h3>
+                        <div class="search-form">
+                            <input type="text" placeholder="Search articles…" aria-label="Search articles">
+                            <button type="button" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                    </div>
+                    <div class="sidebar-widget reveal-up" style="--delay:80ms">
+                        <h3><i class="fa-solid fa-folder-open"></i> Categories</h3>
+                        <ul class="category-list">
+                            <li><a href="404.html">Technology <span>14</span></a></li>
+                            <li><a href="404.html">Innovation <span>22</span></a></li>
+                            <li><a href="404.html">Sustainability <span>18</span></a></li>
+                            <li><a href="404.html">Storage <span>9</span></a></li>
+                            <li><a href="404.html">Company News <span>31</span></a></li>
+                            <li><a href="404.html">Guides &amp; Tips <span>12</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-widget reveal-up" style="--delay:160ms">
+                        <h3><i class="fa-solid fa-fire-flame-curved"></i> Trending Posts</h3>
+                        <ul class="trending-list">
+                            <li>
+                                <span class="trend-num">01</span>
+                                <div>
+                                    <a href="404.html">Perovskite Solar Cells Hit 33% Efficiency in Lab</a>
+                                    <small><i class="fa-regular fa-calendar"></i> June 1, 2026</small>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="trend-num">02</span>
+                                <div>
+                                    <a href="404.html">India Surpasses 200GW of Installed Solar Capacity</a>
+                                    <small><i class="fa-regular fa-calendar"></i> May 20, 2026</small>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="trend-num">03</span>
+                                <div>
+                                    <a href="404.html">EU Stackly Hydrogen Strategy: What It Means for You</a>
+                                    <small><i class="fa-regular fa-calendar"></i> May 5, 2026</small>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-widget reveal-up" style="--delay:240ms">
+                        <h3><i class="fa-solid fa-tags"></i> Popular Tags</h3>
+                        <div class="tags-cloud">
+                            <a href="404.html">Solar</a>
+                            <a href="404.html">Wind</a>
+                            <a href="404.html">Batteries</a>
+                            <a href="404.html">Climate</a>
+                            <a href="404.html">EVs</a>
+                            <a href="404.html">Smart Grid</a>
+                            <a href="404.html">Policy</a>
+                            <a href="404.html">Hydrogen</a>
+                        </div>
+                    </div>
+                    <div class="sidebar-widget bg-widget reveal-up" style="--delay:320ms">
+                        <div class="bg-widget-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+                        <h3>Weekly Newsletter</h3>
+                        <p>Get the latest Stackly news delivered directly to your inbox every week.</p>
+                        <div class="sidebar-newsletter">
+                            <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
+                            <button type="button" class="btn btn-primary">Subscribe <i class="fa-solid fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                </aside>
+
+            </div><!-- /blog-layout -->
+        </div>
+    </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                      <a href="index.html" class="footer-logo">
+                    <img src="logo-removebg-preview.webp" alt="Stackly" class="footer-logo-img">
+                </a>
+                    <p>Powering a sustainable future with innovative renewable energy solutions since 2009.</p>
+                    <div class="footer-social">
+                        <a href="404.html" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="404.html" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="404.html">Solar Energy</a></li>
+                        <li><a href="404.html">Wind Energy</a></li>
+                        <li><a href="404.html">Hydro Power</a></li>
+                        <li><a href="404.html">Energy Storage</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Stay updated with Stackly news.</p>
+                    <div class="footer-newsletter">
+                        <input type="email" placeholder="Your email address">
+                        <button type="button" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Stackly. All rights reserved. | <a href="404.html">Privacy Policy</a> | <a href="404.html">Terms</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <script src="blog.js"></script>
+</body>
+</html>

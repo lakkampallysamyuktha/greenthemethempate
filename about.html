@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Stackly</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="logo-removebg-preview.webp" alt="Stackly" class="nav-logo-img">
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="nav-btn-login">Login</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="ham-line ham-top"></span>
+                <span class="ham-line ham-mid"></span>
+                <span class="ham-line ham-bot"></span>
+            </button>
+        </div>
+        <div class="nav-overlay" id="navOverlay"></div>
+    </nav>
+
+    <main style="position:relative; z-index:0;">
+
+    <!-- ===== SECTION 1: HERO ===== -->
+    <section class="about-hero">
+        <div class="about-hero-overlay"></div>
+        <canvas class="hero-canvas" id="heroCanvas"></canvas>
+        <div class="about-hero-content">
+            <span class="about-eyebrow">
+                <span class="eyebrow-dot"></span>
+                Our Story
+            </span>
+            <h1>Driving the <em>Stackly</em><br>Revolution Forward</h1>
+            <p>Since 2009, we've been turning sunlight, wind, and water into a cleaner future for millions across 120+ countries.</p>
+            <div class="about-hero-stats">
+                <div class="ahs-item" data-count="15" data-suffix="+">
+                    <strong class="counter">0</strong>
+                    <span>Years of Impact</span>
+                </div>
+                <div class="ahs-divider"></div>
+                <div class="ahs-item" data-count="120" data-suffix="+">
+                    <strong class="counter">0</strong>
+                    <span>Countries Served</span>
+                </div>
+                <div class="ahs-divider"></div>
+                <div class="ahs-item" data-count="1" data-suffix="M+">
+                    <strong class="counter">0</strong>
+                    <span>Installations</span>
+                </div>
+                <div class="ahs-divider"></div>
+                <div class="ahs-item" data-count="2.5" data-suffix="M">
+                    <strong class="counter">0</strong>
+                    <span>Tons CO₂ Saved</span>
+                </div>
+            </div>
+        </div>
+        <div class="about-hero-scroll">
+            <span>Scroll</span>
+            <div class="scroll-arrow">
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION 2: MISSION / VISION / VALUES ===== -->
+    <section class="mvv-section">
+        <div class="container">
+            <div class="section-intro reveal-fade">
+                <span class="section-tag">What Drives Us</span>
+                <h2>Purpose at the<br><span>Core of Everything</span></h2>
+            </div>
+            <div class="mvv-grid">
+                <div class="mvv-card reveal-up" style="--delay:0ms">
+                    <div class="mvv-icon-wrap">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <div class="mvv-number">01</div>
+                    <h3>Our Mission</h3>
+                    <p>Accelerate the global transition to renewable energy by delivering accessible, reliable, and affordable Stackly solutions for every community on Earth.</p>
+                    <div class="mvv-line"></div>
+                </div>
+                <div class="mvv-card mvv-featured reveal-up" style="--delay:120ms">
+                    <div class="mvv-icon-wrap">
+                        <i class="fa-solid fa-earth-americas"></i>
+                    </div>
+                    <div class="mvv-number">02</div>
+                    <h3>Our Vision</h3>
+                    <p>A world where carbon emissions are history — where clean energy powers every home, business, and city, and nature flourishes alongside human progress.</p>
+                    <div class="mvv-glow"></div>
+                    <div class="mvv-line"></div>
+                </div>
+                <div class="mvv-card reveal-up" style="--delay:240ms">
+                    <div class="mvv-icon-wrap">
+                        <i class="fa-solid fa-seedling"></i>
+                    </div>
+                    <div class="mvv-number">03</div>
+                    <h3>Our Values</h3>
+                    <p>Integrity, innovation, and community empowerment are at the core of every project, partnership, and decision we make.</p>
+                    <div class="mvv-line"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION 3: TIMELINE ===== -->
+    <section class="story-section">
+        <div class="container">
+            <div class="story-intro reveal-fade">
+                <span class="section-tag">Our History</span>
+                <h2>From a Garage in California<br>to <span>120 Countries</span></h2>
+                <p>What started as a small team of environmental engineers with a big idea has grown into one of the world's most trusted names in renewable energy.</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-track"></div>
+                <div class="timeline-item tl-left reveal-left">
+                    <div class="tl-connector"></div>
+                    <div class="tl-card">
+                        <span class="tl-year">2009</span>
+                        <div class="tl-icon-wrap"><i class="fa-solid fa-sun"></i></div>
+                        <h4>Company Founded</h4>
+                        <p>Started in California with a focus on residential solar installations. First 50 homes powered by clean energy.</p>
+                    </div>
+                </div>
+                <div class="timeline-item tl-right reveal-right">
+                    <div class="tl-connector"></div>
+                    <div class="tl-card">
+                        <span class="tl-year">2012</span>
+                        <div class="tl-icon-wrap"><i class="fa-solid fa-building"></i></div>
+                        <h4>Commercial Breakthrough</h4>
+                        <p>Secured first utility-scale solar project — a 40MW installation powering 12,000 homes in Nevada.</p>
+                    </div>
+                </div>
+                <div class="timeline-item tl-left reveal-left">
+                    <div class="tl-connector"></div>
+                    <div class="tl-card">
+                        <span class="tl-year">2014</span>
+                        <div class="tl-icon-wrap"><i class="fa-solid fa-wind"></i></div>
+                        <h4>Expansion into Wind Energy</h4>
+                        <p>Acquired AeroWind Tech and launched our commercial wind turbine division across the Midwest.</p>
+                    </div>
+                </div>
+                <div class="timeline-item tl-right reveal-right">
+                    <div class="tl-connector"></div>
+                    <div class="tl-card">
+                        <span class="tl-year">2019</span>
+                        <div class="tl-icon-wrap"><i class="fa-solid fa-globe"></i></div>
+                        <h4>Global Headquarters</h4>
+                        <p>Opened European and Asian hubs in Amsterdam and Singapore. Operating in 100+ countries.</p>
+                    </div>
+                </div>
+                <div class="timeline-item tl-left reveal-left">
+                    <div class="tl-connector"></div>
+                    <div class="tl-card tl-card-latest">
+                        <span class="tl-year tl-year-latest">2024</span>
+                        <div class="tl-icon-wrap tl-icon-latest"><i class="fa-solid fa-trophy"></i></div>
+                        <h4>1 Million Installations</h4>
+                        <p>A landmark moment — our one millionth renewable energy system installed, displacing 2.5M tons of CO₂ annually.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION 4: TEAM (4 social icons each) ===== -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-header reveal-fade">
+                <span class="section-tag">Our People</span>
+                <h2>The Team Behind the <span>Mission</span></h2>
+                <p>World-class engineers, scientists, and operators united by one goal: a cleaner planet.</p>
+            </div>
+            <div class="team-grid">
+                <!-- Card 1 -->
+                <div class="team-card reveal-up" style="--delay:0ms">
+                    <div class="team-img-wrap">
+                        <img src="about1.webp" alt="Dr. Mira Chen" loading="lazy">
+                        <div class="team-hover-layer">
+                            <blockquote>"Clean energy is not a choice — it's the only path forward."</blockquote>
+                            <div class="team-social">
+                                <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="404.html" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a href="404.html" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                                <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Dr. Mira Chen</h3>
+                        <span>CEO &amp; Founder</span>
+                        <p>20+ years in renewable energy R&D. Former MIT researcher and IRENA advisor.</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="team-card reveal-up" style="--delay:100ms">
+                    <div class="team-img-wrap">
+                        <img src="about2.webp" alt="Sarah Rodriguez" loading="lazy">
+                        <div class="team-hover-layer">
+                            <blockquote>"Every watt of solar we install is a step away from fossil dependence."</blockquote>
+                            <div class="team-social">
+                                <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="404.html" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a href="404.html" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                                <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Sarah Rodriguez</h3>
+                        <span>Chief Technology Officer</span>
+                        <p>Solar PV expert with 15+ patents and a decade leading breakthrough energy tech.</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="team-card reveal-up" style="--delay:200ms">
+                    <div class="team-img-wrap">
+                        <img src="about3.webp" alt="David Miller" loading="lazy">
+                        <div class="team-hover-layer">
+                            <blockquote>"Flawless execution turns great ideas into real impact at scale."</blockquote>
+                            <div class="team-social">
+                                <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="404.html" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a href="404.html" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                                <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>David Miller</h3>
+                        <span>Head of Operations</span>
+                        <p>Logistics mastermind overseeing our global supply chain across six continents.</p>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="team-card reveal-up" style="--delay:300ms">
+                    <div class="team-img-wrap">
+                        <img src="about4.webp" alt="Elena Rostova" loading="lazy">
+                        <div class="team-hover-layer">
+                            <blockquote>"Sustainability isn't a department — it's embedded in every decision."</blockquote>
+                            <div class="team-social">
+                                <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="404.html" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a href="404.html" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                                <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Elena Rostova</h3>
+                        <span>Chief Sustainability Officer</span>
+                        <p>Ensures our operations remain 100% carbon neutral — from R&D to last-mile delivery.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION 5: AWARDS ===== -->
+    <section class="awards-section">
+        <div class="container">
+            <div class="section-header reveal-fade">
+                <span class="section-tag section-tag-light">Recognition</span>
+                <h2>Awards &amp; <span>Certifications</span></h2>
+                <p>We don't do it for the trophies — but being recognized for our impact means the world to our team.</p>
+            </div>
+            <div class="awards-grid">
+                <div class="award-card reveal-up" style="--delay:0ms">
+                    <div class="award-icon"><i class="fa-solid fa-award"></i></div>
+                    <h4>Global Stackly Tech Award</h4>
+                    <span>2025 Winner</span>
+                </div>
+                <div class="award-card reveal-up" style="--delay:80ms">
+                    <div class="award-icon"><i class="fa-solid fa-certificate"></i></div>
+                    <h4>ISO 14001 Certified</h4>
+                    <span>Environmental Management</span>
+                </div>
+                <div class="award-card reveal-up" style="--delay:160ms">
+                    <div class="award-icon"><i class="fa-solid fa-trophy"></i></div>
+                    <h4>Best Solar Innovator</h4>
+                    <span>Energy Excellence 2024</span>
+                </div>
+                <div class="award-card reveal-up" style="--delay:240ms">
+                    <div class="award-icon"><i class="fa-solid fa-leaf"></i></div>
+                    <h4>Carbon Neutral Certified</h4>
+                    <span>Climate Neutral Group</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo">
+                        <img src="logo-removebg-preview.webp" alt="Stackly" class="footer-logo-img">
+                    </a>
+                    <p>Powering a sustainable future with innovative renewable energy solutions since 2009.</p>
+                    <div class="footer-social">
+                        <a href="404.html" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="404.html" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Solar Energy</a></li>
+                        <li><a href="services.html">Wind Energy</a></li>
+                        <li><a href="services.html">Hydro Power</a></li>
+                        <li><a href="services.html">Energy Storage</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Stay updated with Stackly news.</p>
+                    <div class="footer-newsletter">
+                        <input type="email" placeholder="Your email address">
+                        <button type="button" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Stackly. All rights reserved. | <a href="404.html">Privacy Policy</a> | <a href="404.html">Terms</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <script src="about.js"></script>
+</body>
+</html>

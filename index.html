@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly | Powering a Sustainable Future</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="logo-removebg-preview.webp" alt="Stackly" class="nav-logo-img">
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="nav-btn-login">Login</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="ham-line ham-top"></span>
+                <span class="ham-line ham-mid"></span>
+                <span class="ham-line ham-bot"></span>
+            </button>
+        </div>
+        <div class="nav-overlay" id="navOverlay"></div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+        <div class="slide-bg">
+            <div class="slide slide-1 active"></div>
+            <div class="slide slide-2"></div>
+            <div class="slide slide-3"></div>
+            <div class="slide slide-4"></div>
+        </div>
+        <div class="hero-radial"></div>
+        <div class="hero-particles" id="heroParticles"></div>
+
+        <div class="hero-content">
+            <div class="hero-left">
+                <div class="hero-badge"><i class="fa-solid fa-bolt"></i> 100% Renewable Energy</div>
+                <h1 class="hero-title">Powering a <span class="gradient-text">Sustainable</span> Tomorrow</h1>
+                <p class="hero-subtitle">Join the green revolution with cutting-edge solar, wind, and hydro solutions. Reduce your carbon footprint while saving on energy costs.</p>
+                <div class="hero-buttons">
+                    <a href="services.html" class="btn btn-primary">Explore Solutions <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="contact.html" class="btn btn-outline">Get Free Quote <i class="fa-solid fa-calculator"></i></a>
+                </div>
+                <div class="hero-stats-row">
+                    <div class="hero-stat"><span class="stat-number">50K+</span><span class="stat-label">Happy Clients</span></div>
+                    <div class="stat-divider"></div>
+                    <div class="hero-stat"><span class="stat-number">120+</span><span class="stat-label">Countries</span></div>
+                    <div class="stat-divider"></div>
+                    <div class="hero-stat"><span class="stat-number">2.5M</span><span class="stat-label">Tons CO₂ Saved</span></div>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="hero-preview-stack">
+                    <div class="hero-preview-main">
+                        <img id="heroPreviewImg" src="index1.webp" alt="Solar panels">
+                    </div>
+                    <div class="hero-floating-card">
+                        <i class="fa-solid fa-sun"></i>
+                        <span>Solar Output: <strong>98.5%</strong></span>
+                    </div>
+                    <div class="hero-floating-card2">
+                        <div class="fc2-label">CO₂ Offset Today</div>
+                        <div class="fc2-value">1,240 kg</div>
+                        <div class="fc2-sub">↑ 12% vs yesterday</div>
+                    </div>
+                    <div class="hero-energy-bar">
+                        <div class="heb-label">Live Grid Load</div>
+                        <div class="heb-track"><div class="heb-fill" id="hebFill"></div></div>
+                        <div class="heb-pct" id="hebPct">78%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide-controls">
+            <button class="slide-dot active" data-idx="0"></button>
+            <button class="slide-dot" data-idx="1"></button>
+            <button class="slide-dot" data-idx="2"></button>
+            <button class="slide-dot" data-idx="3"></button>
+        </div>
+        <div class="slide-arrows">
+            <button class="slide-arrow" id="slidePrev"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="slide-arrow" id="slideNext"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path fill="#ffffff" d="M0,60 C360,120 1080,0 1440,60 L1440,120 L0,120 Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ===== TICKER BAND ===== -->
+    <div class="ticker-band">
+        <div class="ticker-track">
+            <span><i class="fa-solid fa-solar-panel"></i> Solar Output Today: <strong>2,450 MWh</strong></span>
+            <span><i class="fa-solid fa-wind"></i> Wind Generated: <strong>1,820 MWh</strong></span>
+            <span><i class="fa-solid fa-droplet"></i> Hydro Power: <strong>940 MWh</strong></span>
+            <span><i class="fa-solid fa-leaf"></i> CO₂ Avoided: <strong>4,210 tons</strong></span>
+            <span><i class="fa-solid fa-bolt"></i> Homes Powered: <strong>68,000+</strong></span>
+            <span><i class="fa-solid fa-earth-americas"></i> Countries Active: <strong>120+</strong></span>
+            <span><i class="fa-solid fa-solar-panel"></i> Solar Output Today: <strong>2,450 MWh</strong></span>
+            <span><i class="fa-solid fa-wind"></i> Wind Generated: <strong>1,820 MWh</strong></span>
+            <span><i class="fa-solid fa-droplet"></i> Hydro Power: <strong>940 MWh</strong></span>
+            <span><i class="fa-solid fa-leaf"></i> CO₂ Avoided: <strong>4,210 tons</strong></span>
+            <span><i class="fa-solid fa-bolt"></i> Homes Powered: <strong>68,000+</strong></span>
+            <span><i class="fa-solid fa-earth-americas"></i> Countries Active: <strong>120+</strong></span>
+        </div>
+    </div>
+
+    <!-- ===== STATS SECTION ===== -->
+    <section class="stats-section" id="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stats-card reveal-up" style="--delay:0s">
+                    <div class="stats-icon"><i class="fa-solid fa-solar-panel"></i></div>
+                    <div class="stats-info">
+                        <div class="stats-num-row"><span class="stats-counter" data-target="850">0</span><span class="stats-unit">MW</span></div>
+                        <p>Solar Capacity Installed</p>
+                    </div>
+                    <div class="stats-glow"></div>
+                </div>
+                <div class="stats-card reveal-up" style="--delay:0.1s">
+                    <div class="stats-icon"><i class="fa-solid fa-fan"></i></div>
+                    <div class="stats-info">
+                        <div class="stats-num-row"><span class="stats-counter" data-target="620">0</span><span class="stats-unit">MW</span></div>
+                        <p>Wind Energy Generated</p>
+                    </div>
+                    <div class="stats-glow"></div>
+                </div>
+                <div class="stats-card reveal-up" style="--delay:0.2s">
+                    <div class="stats-icon"><i class="fa-solid fa-water"></i></div>
+                    <div class="stats-info">
+                        <div class="stats-num-row"><span class="stats-counter" data-target="340">0</span><span class="stats-unit">MW</span></div>
+                        <p>Hydro Power Capacity</p>
+                    </div>
+                    <div class="stats-glow"></div>
+                </div>
+                <div class="stats-card reveal-up" style="--delay:0.3s">
+                    <div class="stats-icon"><i class="fa-solid fa-tree"></i></div>
+                    <div class="stats-info">
+                        <div class="stats-num-row"><span class="stats-counter" data-target="1250">0</span><span class="stats-unit">K</span></div>
+                        <p>Trees Planted</p>
+                    </div>
+                    <div class="stats-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="about-intro" id="about">
+        <div class="container">
+            <div class="about-intro-grid">
+                <div class="about-intro-images reveal-left">
+                    <img src="index2.webp" alt="Wind turbines" class="about-img-1" loading="lazy">
+                    <img src="index3.webp" alt="Solar installation" class="about-img-2" loading="lazy">
+                    <div class="about-exp-badge"><span>15+</span> Years Experience</div>
+                </div>
+                <div class="about-intro-text reveal-right">
+                    <span class="section-tag">Who We Are</span>
+                    <h2>Leading the Charge in <span>Renewable Energy</span></h2>
+                    <p>Stackly is at the forefront of the global transition to clean, sustainable power. Since 2009, we've been designing, installing, and maintaining renewable energy systems for residential, commercial, and industrial clients worldwide.</p>
+                    <ul class="about-feature-list">
+                        <li><i class="fa-solid fa-circle-check"></i> Certified by International Renewable Energy Agency</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Award-winning solar &amp; wind technology</li>
+                        <li><i class="fa-solid fa-circle-check"></i> 24/7 monitoring &amp; dedicated support</li>
+                        <li><i class="fa-solid fa-circle-check"></i> 100% carbon-neutral operations</li>
+                    </ul>
+                    <a href="about.html" class="btn btn-secondary">Learn More About Us <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section class="services-overview" id="services">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">Our Services</span>
+                <h2>Comprehensive <span>Stackly</span> Solutions</h2>
+                <p>From rooftop solar to large-scale wind farms, we offer end-to-end renewable energy services tailored to your needs.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal-up" style="--delay:0s">
+                    <div class="service-card-icon"><i class="fa-solid fa-sun"></i></div>
+                    <h3>Solar Energy</h3>
+                    <p>High-efficiency photovoltaic systems for homes and businesses with smart inverter technology.</p>
+                    <a href="404.html" class="service-link">Explore <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card reveal-up" style="--delay:0.1s">
+                    <div class="service-card-icon"><i class="fa-solid fa-wind"></i></div>
+                    <h3>Wind Energy</h3>
+                    <p>Advanced wind turbine solutions from micro turbines to utility-scale wind farm deployments.</p>
+                    <a href="404.html" class="service-link">Explore <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card reveal-up" style="--delay:0.2s">
+                    <div class="service-card-icon"><i class="fa-solid fa-droplet"></i></div>
+                    <h3>Hydro Energy</h3>
+                    <p>Small to medium hydroelectric systems leveraging natural water flows for consistent power.</p>
+                    <a href="404.html" class="service-link">Explore <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card reveal-up" style="--delay:0.3s">
+                    <div class="service-card-icon"><i class="fa-solid fa-battery-full"></i></div>
+                    <h3>Energy Storage</h3>
+                    <p>Cutting-edge battery storage systems to maximize your renewable energy utilization 24/7.</p>
+                    <a href="404.html" class="service-link">Explore <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">Our Work</span>
+                <h2>Featured <span>Projects</span></h2>
+                <p>Showcasing our most impactful installations around the globe.</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card reveal-up" style="--delay:0s">
+                    <img src="index4.webp" alt="Solar farm" loading="lazy">
+                    <div class="project-overlay">
+                        <span class="project-category">Solar Farm</span>
+                        <h3>Desert Sun Project</h3>
+                        <p>500MW installation in Morocco</p>
+                    </div>
+                </div>
+                <div class="project-card reveal-up" style="--delay:0.1s">
+                    <img src="index5.webp" alt="Wind farm" loading="lazy">
+                    <div class="project-overlay">
+                        <span class="project-category">Wind Farm</span>
+                        <h3>North Sea Winds</h3>
+                        <p>320MW offshore Netherlands</p>
+                    </div>
+                </div>
+                <div class="project-card reveal-up" style="--delay:0.2s">
+                    <img src="index6.webp" alt="Hydro project" loading="lazy">
+                    <div class="project-overlay">
+                        <span class="project-category">Hydroelectric</span>
+                        <h3>Alpine Flow</h3>
+                        <p>180MW in Switzerland</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">Process</span>
+                <h2>How It <span>Works</span></h2>
+                <p>Our streamlined process makes going green simple and hassle-free.</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card reveal-up" style="--delay:0s">
+                    <div class="step-number">01</div>
+                    <div class="step-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                    <h3>Free Assessment</h3>
+                    <p>We analyze your energy needs and site conditions with a free, no-obligation consultation.</p>
+                </div>
+                <div class="step-card reveal-up" style="--delay:0.12s">
+                    <div class="step-number">02</div>
+                    <div class="step-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+                    <h3>Custom Design</h3>
+                    <p>Our engineers create a tailored renewable energy system optimized for maximum efficiency.</p>
+                </div>
+                <div class="step-card reveal-up" style="--delay:0.24s">
+                    <div class="step-number">03</div>
+                    <div class="step-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                    <h3>Expert Installation</h3>
+                    <p>Certified technicians install your system safely with minimal disruption to your daily life.</p>
+                </div>
+                <div class="step-card reveal-up" style="--delay:0.36s">
+                    <div class="step-number">04</div>
+                    <div class="step-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3>Monitor &amp; Save</h3>
+                    <p>Track your energy production in real-time and start saving from day one.</p>
+                </div>
+            </div>
+            <div class="steps-connector" aria-hidden="true"></div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">Testimonials</span>
+                <h2>What Our <span>Clients Say</span></h2>
+                <p>Real results from real customers around the world.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal-up" style="--delay:0s">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p>"Switching to Stackly's solar system was the best decision. Our electricity bills dropped by 70% and the installation was seamless."</p>
+                    <div class="testimonial-author">
+                        <img src="index7.webp" alt="James Carter" loading="lazy">
+                        <div><strong>James Carter</strong><span>Homeowner, California</span></div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal-up" style="--delay:0.12s">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p>"Their wind energy solution powers our entire manufacturing facility. Professional team, excellent ROI, and outstanding support."</p>
+                    <div class="testimonial-author">
+                        <img src="index8.webp" alt="Sarah Mitchell" loading="lazy">
+                        <div><strong>Sarah Mitchell</strong><span>CEO, EcoFabrics Ltd</span></div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal-up" style="--delay:0.24s">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p>"Stackly's hydro solution was tailored perfectly to our remote location. Now we have reliable, clean power year-round."</p>
+                    <div class="testimonial-author">
+                        <img src="index9.webp" alt="David Okonkwo" loading="lazy">
+                        <div><strong>David Okonkwo</strong><span>Community Leader, Kenya</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta-section" id="cta">
+        <div class="cta-particles">
+            <div class="cta-circle"></div>
+            <div class="cta-circle"></div>
+            <div class="cta-circle"></div>
+        </div>
+        <div class="container">
+            <div class="cta-content reveal-up">
+                <h2>Ready to Embrace <span>Clean Energy</span>?</h2>
+                <p>Join thousands of satisfied customers who have made the switch. Get your personalized quote today and start saving while saving the planet.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary btn-lg">Get Your Free Quote</a>
+                    <a href="login.html" class="btn btn-outline-white btn-lg">Client Portal</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                      <a href="index.html" class="footer-logo">
+                    <img src="logo-removebg-preview.webp" alt="Stackly" class="footer-logo-img">
+                </a>
+                    <p>Powering a sustainable future with innovative renewable energy solutions since 2009.</p>
+                    <div class="footer-social">
+                        <a href="404.html" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="404.html" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Solar Energy</a></li>
+                        <li><a href="services.html">Wind Energy</a></li>
+                        <li><a href="services.html">Hydro Power</a></li>
+                        <li><a href="services.html">Energy Storage</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Stay updated with Stackly news.</p>
+                    <form class="footer-newsletter" onsubmit="return false">
+                        <input type="email" placeholder="Your email address">
+                        <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Stackly. All rights reserved. | <a href="404.html">Privacy Policy</a> | <a href="404.html">Terms</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <script src="index.js"></script>
+</body>
+</html>

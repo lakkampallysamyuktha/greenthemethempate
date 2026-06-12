@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Stackly — Viewer Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="dashboardviewer.css">
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-logo">
+    <a href="index.html"><img src="logo-removebg-preview.webp" alt="Stackly" class="nav-logo-img"></a>
+    <button class="sidebar-close" id="sidebarCloseBtn">✕</button>
+  </div>
+  <nav class="sidebar-nav">
+    <div class="nav-section-label">Main</div>
+    <a href="#" class="nav-item active" data-page="overview"><i class="ph ph-squares-four"></i><span>Overview</span></a>
+    <a href="#" class="nav-item" data-page="energy"><i class="ph ph-lightning"></i><span>Energy Feed</span></a>
+    <a href="#" class="nav-item" data-page="sites"><i class="ph ph-map-pin"></i><span>Sites Map</span></a>
+    <a href="#" class="nav-item" data-page="reports"><i class="ph ph-chart-bar"></i><span>Reports</span></a>
+    <div class="nav-section-label">Resources</div>
+    <a href="#" class="nav-item" data-page="gallery"><i class="ph ph-images"></i><span>Gallery</span></a>
+    <a href="#" class="nav-item" data-page="news"><i class="ph ph-newspaper"></i><span>News</span></a>
+    <a href="#" class="nav-item" data-page="learn"><i class="ph ph-book-open"></i><span>Learn</span></a>
+    <div class="nav-section-label">Account</div>
+    <a href="#" class="nav-item" data-page="profile"><i class="ph ph-user-circle"></i><span>My Profile</span></a>
+    <a href="#" class="nav-item" data-page="settings"><i class="ph ph-gear"></i><span>Settings</span></a>
+  </nav>
+  <div class="sidebar-bottom">
+    <a href="index.html" class="logout-btn"><i class="ph ph-sign-out"></i> Logout</a>
+  </div>
+</aside>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="topbar-left">
+    <button class="hamburger" id="hamburger"><i class="ph ph-list"></i></button>
+    <div class="topbar-title" id="pageTitle">Overview</div>
+  </div>
+  <div class="topbar-right">
+    <div class="topbar-actions">
+      <button class="topbar-btn" onclick="location.href='404.html'"><i class="ph ph-bell"></i></button>
+      <button class="topbar-btn" onclick="location.href='404.html'"><i class="ph ph-magnifying-glass"></i></button>
+    </div>
+    <div class="user-profile">
+      <div class="user-avatar" id="userAvatar">U</div>
+      <div class="user-info-text">
+        <div class="user-name" id="userName">Viewer</div>
+        <div class="user-email" id="userEmail">viewer@stackly.com</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="overlay" id="overlay"></div>
+
+<main class="main-content">
+  <!-- OVERVIEW -->
+  <div class="page active" id="page-overview">
+    <div class="user-greeting"><div><h2 id="greetName">Hello, User!</h2><p id="greetEmail">viewer@stackly.com · Viewer</p></div><div class="greeting-badge"><i class="ph ph-sun"></i> Live</div></div>
+    <div class="cards-grid">
+      <div class="stat-card green"><i class="ph ph-lightning"></i><div class="stat-val">4.8 MW</div><div class="stat-lbl">Current Output</div></div>
+      <div class="stat-card teal"><i class="ph ph-tree"></i><div class="stat-val">12.4 t</div><div class="stat-lbl">CO₂ Saved Today</div></div>
+      <div class="stat-card lime"><i class="ph ph-sun"></i><div class="stat-val">92%</div><div class="stat-lbl">Solar Efficiency</div></div>
+      <div class="stat-card sky"><i class="ph ph-wind"></i><div class="stat-val">68%</div><div class="stat-lbl">Wind Uptime</div></div>
+    </div>
+    <h3 class="section-title">Energy Sites</h3>
+    <div class="img-grid">
+      <div class="img-card"><img src="viewer1.webp" alt="Solar"/><div class="img-overlay"><span class="img-tag">Solar</span><h4>Rajasthan Solar Park</h4><p>Output: 1.2 MW</p></div></div>
+      <div class="img-card"><img src="viewer2.webp" alt="Wind"/><div class="img-overlay"><span class="img-tag">Wind</span><h4>Gujarat Wind Farm</h4><p>Output: 0.9 MW</p></div></div>
+      <div class="img-card"><img src="viewer3.webp" alt="Hydro"/><div class="img-overlay"><span class="img-tag">Hydro</span><h4>Kerala Micro-Hydro</h4><p>Output: 0.6 MW</p></div></div>
+      <div class="img-card"><img src="viewer4.webp" alt="Grid"/><div class="img-overlay"><span class="img-tag">Grid</span><h4>Delhi Smart Grid</h4><p>Nodes: 48</p></div></div>
+      <div class="img-card"><img src="viewer5.webp" alt="Storage"/><div class="img-overlay"><span class="img-tag">Storage</span><h4>Mumbai Battery Hub</h4><p>Charge 74%</p></div></div>
+      <div class="img-card"><img src="viewer6.webp" alt="Offshore"/><div class="img-overlay"><span class="img-tag">Offshore</span><h4>Tamil Nadu Offshore</h4><p>2.1 MW</p></div></div>
+    </div>
+  </div>
+
+  <!-- ENERGY FEED -->
+  <div class="page" id="page-energy"><h2 class="page-heading">Live Energy Feed</h2><div class="energy-feed" id="energyFeed"></div><button class="page-btn" onclick="location.href='404.html'"><i class="ph ph-download-simple"></i> Export Feed</button></div>
+
+  <!-- SITES MAP -->
+  <div class="page" id="page-sites"><h2 class="page-heading">Sites Map</h2><div class="map-placeholder"><img src="viewer7.webp" alt="Map"/><div class="map-pins"><div class="map-pin" style="top:30%;left:25%"><i class="ph ph-map-pin"></i><span>Gujarat</span></div><div class="map-pin" style="top:50%;left:55%"><i class="ph ph-map-pin"></i><span>Delhi</span></div><div class="map-pin" style="top:70%;left:40%"><i class="ph ph-map-pin"></i><span>Kerala</span></div></div></div><button class="page-btn" onclick="location.href='404.html'"><i class="ph ph-share-network"></i> Share Map</button></div>
+
+  <!-- REPORTS -->
+  <div class="page" id="page-reports"><h2 class="page-heading">Reports</h2><div class="report-list"><div class="report-item"><i class="ph ph-file-text"></i><div><strong>June 2025 — Monthly Summary</strong><p>Energy metrics</p></div><a href="404.html" class="btn-sm">Download</a></div><div class="report-item"><i class="ph ph-file-text"></i><div><strong>Q1 2025 — Quarterly Review</strong><p>Site performance</p></div><a href="404.html" class="btn-sm">Download</a></div><div class="report-item"><i class="ph ph-file-text"></i><div><strong>Annual Report 2024</strong><p>Full year data</p></div><a href="404.html" class="btn-sm">Download</a></div></div></div>
+
+  <!-- GALLERY -->
+  <div class="page" id="page-gallery"><h2 class="page-heading">Gallery</h2><div class="gallery-grid"><img src="viewer8.webp" alt=""/><img src="index2.webp" alt=""/><img src="blog5.webp" alt=""/><img src="viewer4.webp" alt=""/><img src="viewer6.webp" alt=""/><img src="viewer5.webp" alt=""/></div></div>
+
+  <!-- NEWS -->
+  <div class="page" id="page-news"><h2 class="page-heading">Stackly News</h2><div class="news-list"><div class="news-card"><img src="viewer9.webp" alt=""/><div class="news-body"><span class="news-tag">Solar</span><h4>India adds 10 GW solar capacity in H1 2025</h4><p>Rapid deployment across Rajasthan and Gujarat drives national records.</p><a href="404.html" class="news-link">Read more <i class="ph ph-arrow-right"></i></a></div></div><div class="news-card"><img src="viewer2.webp"/><div class="news-body"><span class="news-tag">Wind</span><h4>Offshore wind tender results announced</h4><p>Tamil Nadu coastline to host South Asia's largest offshore project.</p><a href="404.html" class="news-link">Read more <i class="ph ph-arrow-right"></i></a></div></div><div class="news-card"><img src="viewer3.webp"/><div class="news-body"><span class="news-tag">Policy</span><h4>Green Hydrogen Mission clears final hurdles</h4><p>Central government approves ₹19,000 cr incentive framework.</p><a href="404.html" class="news-link">Read more <i class="ph ph-arrow-right"></i></a></div></div></div></div>
+
+  <!-- LEARN -->
+  <div class="page" id="page-learn"><h2 class="page-heading">Learning Hub</h2><div class="learn-grid"><div class="learn-card"><i class="ph ph-sun"></i><h4>Solar Basics</h4><p>How photovoltaic cells convert sunlight into electricity.</p><a href="404.html" class="btn-sm">Start</a></div><div class="learn-card"><i class="ph ph-wind"></i><h4>Wind Energy</h4><p>Understanding turbine mechanics and capacity factors.</p><a href="404.html" class="btn-sm">Start</a></div><div class="learn-card"><i class="ph ph-battery-charging"></i><h4>Energy Storage</h4><p>Battery technologies shaping grid resilience.</p><a href="404.html" class="btn-sm">Start</a></div></div></div>
+
+  <!-- PROFILE -->
+  <div class="page" id="page-profile"><h2 class="page-heading">My Profile</h2><div class="profile-card"><div class="profile-avatar" id="profileAvatar">U</div><h3 id="profileName">—</h3><p id="profileEmail" class="profile-email">—</p><div class="profile-badge">Viewer</div><a href="404.html" class="btn-sm" style="margin-top:20px">Edit Profile</a></div></div>
+
+  <!-- SETTINGS -->
+  <div class="page" id="page-settings"><h2 class="page-heading">Settings</h2><div class="settings-list"><div class="setting-row"><span>Email notifications</span><a href="404.html" class="btn-sm">Configure</a></div><div class="setting-row"><span>Language & timezone</span><a href="404.html" class="btn-sm">Configure</a></div><div class="setting-row"><span>Change password</span><a href="404.html" class="btn-sm">Update</a></div><div class="setting-row"><span>Delete account</span><a href="404.html" class="btn-sm danger">Delete</a></div></div></div>
+</main>
+
+<script src="dashboardviewer.js"></script>
+</body>
+</html>

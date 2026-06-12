@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Stackly — Admin Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="dashboardadmin.css">
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-logo">
+    <a href="index.html"><img src="logo-removebg-preview.webp" alt="Stackly" class="nav-logo-img"></a>
+    <span class="admin-badge">Admin</span>
+    <button class="sidebar-close" id="sidebarCloseBtn">✕</button>
+  </div>
+  <nav class="sidebar-nav">
+    <div class="nav-section-label">Dashboard</div>
+    <a href="#" class="nav-item active" data-page="overview"><i class="ph ph-squares-four"></i><span>Overview</span></a>
+    <a href="#" class="nav-item" data-page="metrics"><i class="ph ph-chart-line-up"></i><span>Metrics</span></a>
+    <a href="#" class="nav-item" data-page="sites"><i class="ph ph-map-trifold"></i><span>Site Manager</span></a>
+    <a href="#" class="nav-item" data-page="alerts"><i class="ph ph-bell-ringing"></i><span>Alerts</span><span class="badge-pill">3</span></a>
+    <div class="nav-section-label">Management</div>
+    <a href="#" class="nav-item" data-page="users"><i class="ph ph-users"></i><span>Users</span></a>
+    <a href="#" class="nav-item" data-page="devices"><i class="ph ph-cpu"></i><span>Devices</span></a>
+    <a href="#" class="nav-item" data-page="reports"><i class="ph ph-file-text"></i><span>Reports</span></a>
+    <a href="#" class="nav-item" data-page="billing"><i class="ph ph-credit-card"></i><span>Billing</span></a>
+    <div class="nav-section-label">System</div>
+    <a href="#" class="nav-item" data-page="logs"><i class="ph ph-terminal"></i><span>System Logs</span></a>
+    <a href="#" class="nav-item" data-page="settings"><i class="ph ph-gear"></i><span>Settings</span></a>
+  </nav>
+  <div class="sidebar-bottom">
+    <a href="index.html" class="logout-btn"><i class="ph ph-sign-out"></i> Logout</a>
+  </div>
+</aside>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="topbar-left">
+    <button class="hamburger" id="hamburger"><i class="ph ph-list"></i></button>
+    <div class="topbar-title" id="pageTitle">Overview</div>
+  </div>
+  <div class="topbar-right">
+    <div class="topbar-actions">
+      <button class="topbar-btn" onclick="location.href='404.html'"><i class="ph ph-bell"></i></button>
+      <button class="topbar-btn" onclick="location.href='404.html'"><i class="ph ph-magnifying-glass"></i></button>
+      <button class="topbar-btn" onclick="location.href='404.html'"><i class="ph ph-plus-circle"></i></button>
+    </div>
+    <div class="user-profile">
+      <div class="user-avatar" id="userAvatar">A</div>
+      <div class="user-info-text">
+        <div class="user-name" id="userName">Admin</div>
+        <div class="user-email" id="userEmail">admin@stackly.com</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="overlay" id="overlay"></div>
+
+<main class="main-content">
+  <!-- OVERVIEW -->
+  <div class="page active" id="page-overview">
+    <div class="user-greeting"><div><h2 id="greetName">Hello, Admin!</h2><p id="greetEmail">admin@stackly.com · Administrator</p></div><div class="greeting-badges"><div class="greeting-badge green"><i class="ph ph-activity"></i> All Systems OK</div><div class="greeting-badge amber"><i class="ph ph-warning"></i> 3 Alerts</div></div></div>
+    <div class="metrics-grid">
+      <div class="metric-card blue"><div class="metric-icon"><i class="ph ph-lightning"></i></div><div class="metric-info"><div class="metric-val" id="mOutput">—</div><div class="metric-lbl">Total Output</div><div class="metric-delta up"><i class="ph ph-trend-up"></i> +8.2%</div></div></div>
+      <div class="metric-card green"><div class="metric-icon"><i class="ph ph-tree"></i></div><div class="metric-info"><div class="metric-val">24.8 t</div><div class="metric-lbl">CO₂ Avoided</div><div class="metric-delta up"><i class="ph ph-trend-up"></i> +12%</div></div></div>
+      <div class="metric-card teal"><div class="metric-icon"><i class="ph ph-buildings"></i></div><div class="metric-info"><div class="metric-val">6</div><div class="metric-lbl">Active Sites</div><div class="metric-delta neutral"><i class="ph ph-minus"></i> No change</div></div></div>
+      <div class="metric-card amber"><div class="metric-icon"><i class="ph ph-bell-ringing"></i></div><div class="metric-info"><div class="metric-val">3</div><div class="metric-lbl">Active Alerts</div><div class="metric-delta down"><i class="ph ph-trend-down"></i> -2</div></div></div>
+      <div class="metric-card purple"><div class="metric-icon"><i class="ph ph-users"></i></div><div class="metric-info"><div class="metric-val">47</div><div class="metric-lbl">Active Users</div><div class="metric-delta up"><i class="ph ph-trend-up"></i> +5</div></div></div>
+      <div class="metric-card rose"><div class="metric-icon"><i class="ph ph-currency-dollar"></i></div><div class="metric-info"><div class="metric-val">₹4.2L</div><div class="metric-lbl">Revenue Today</div><div class="metric-delta up"><i class="ph ph-trend-up"></i> +6.4%</div></div></div>
+    </div>
+    <div class="panel-row"><div class="panel"><div class="panel-header"><h3>Output Chart</h3><a href="404.html" class="btn-sm">Full Report</a></div><div class="chart-area" id="chartArea"></div></div><div class="panel"><div class="panel-header"><h3>Site Status</h3><a href="404.html" class="btn-sm">Manage</a></div><div class="site-rows" id="siteRows"></div></div></div>
+  </div>
+
+  <!-- METRICS -->
+  <div class="page" id="page-metrics"><h2 class="page-heading">Performance Metrics</h2><div class="metrics-grid"><div class="metric-card blue"><div class="metric-icon"><i class="ph ph-lightning"></i></div><div class="metric-info"><div class="metric-val">4.8 MW</div><div class="metric-lbl">Current Output</div></div></div><div class="metric-card green"><div class="metric-icon"><i class="ph ph-sun"></i></div><div class="metric-info"><div class="metric-val">93%</div><div class="metric-lbl">Solar Efficiency</div></div></div><div class="metric-card teal"><div class="metric-icon"><i class="ph ph-wind"></i></div><div class="metric-info"><div class="metric-val">68%</div><div class="metric-lbl">Wind Uptime</div></div></div><div class="metric-card amber"><div class="metric-icon"><i class="ph ph-battery-full"></i></div><div class="metric-info"><div class="metric-val">74%</div><div class="metric-lbl">Storage Level</div></div></div></div><div class="big-chart-wrap"><div class="panel"><div class="panel-header"><h3>24‑Hour Output (MW)</h3><a href="404.html" class="btn-sm">Export</a></div><canvas id="bigChart" class="big-canvas"></canvas></div></div><button class="page-btn" onclick="location.href='404.html'"><i class="ph ph-download-simple"></i> Download Full Metrics</button></div>
+
+  <!-- SITE MANAGER -->
+  <div class="page" id="page-sites"><h2 class="page-heading">Site Manager</h2><div class="table-wrap"><table class="data-table"><thead><tr><th>Site Name</th><th>Type</th><th>Output</th><th>Status</th><th>Actions</th></tr></thead><tbody><tr><td>Rajasthan Solar Park</td><td>Solar</td><td>1.2 MW</td><td><span class="status-pill on">Online</span></td><td><a href="404.html" class="btn-sm">Edit</a></td></tr><tr><td>Gujarat Wind Farm</td><td>Wind</td><td>0.9 MW</td><td><span class="status-pill on">Online</span></td><td><a href="404.html" class="btn-sm">Edit</a></td></tr><tr><td>Kerala Micro-Hydro</td><td>Hydro</td><td>0.6 MW</td><td><span class="status-pill on">Online</span></td><td><a href="404.html" class="btn-sm">Edit</a></td></tr><tr><td>Delhi Smart Grid</td><td>Grid</td><td>1.5 MW</td><td><span class="status-pill on">Online</span></td><td><a href="404.html" class="btn-sm">Edit</a></td></tr><tr><td>Mumbai Battery Hub</td><td>Storage</td><td>—</td><td><span class="status-pill warn">Maintenance</span></td><td><a href="404.html" class="btn-sm">Edit</a></td></tr><tr><td>Tamil Nadu Offshore</td><td>Wind</td><td>2.1 MW</td><td><span class="status-pill on">Online</span></td><td><a href="404.html" class="btn-sm">Edit</a></td></tr></tbody></table></div><button class="page-btn" onclick="location.href='404.html'"><i class="ph ph-plus"></i> Add New Site</button></div>
+
+  <!-- ALERTS -->
+  <div class="page" id="page-alerts"><h2 class="page-heading">Active Alerts</h2><div class="alerts-list"><div class="alert-card warn"><i class="ph ph-warning"></i><div><strong>Mumbai Battery Hub</strong><p>Scheduled maintenance active</p><span class="alert-time">2 hrs ago</span></div><a href="404.html" class="btn-sm">Resolve</a></div><div class="alert-card info"><i class="ph ph-info"></i><div><strong>Kerala Micro-Hydro</strong><p>Water flow reduced 12%</p><span class="alert-time">5 hrs ago</span></div><a href="404.html" class="btn-sm">Details</a></div><div class="alert-card warn"><i class="ph ph-warning"></i><div><strong>Rajasthan Solar Park</strong><p>Panel cleaning due</p><span class="alert-time">8 hrs ago</span></div><a href="404.html" class="btn-sm">Schedule</a></div></div><button class="page-btn" onclick="location.href='404.html'"><i class="ph ph-bell-slash"></i> Dismiss All</button></div>
+
+  <!-- USERS -->
+  <div class="page" id="page-users"><h2 class="page-heading">User Management</h2><div class="table-wrap"><table class="data-table"><thead><tr><th>Name</th><th>Email</th><th>Role</th><th>Status</th><th>Actions</th></tr></thead><tbody><tr><td>Priya Sharma</td><td>priya@ge.io</td><td>Admin</td><td><span class="status-pill on">Active</span></td><td><a href="404.html" class="btn-sm">Edit</a></td></tr><tr><td>Rahul Singh</td><td>rahul@ge.io</td><td>Viewer</td><td><span class="status-pill on">Active</span></td><td><a href="404.html" class="btn-sm">Edit</a></td></tr><tr><td>Anita Das</td><td>anita@ge.io</td><td>Viewer</td><td><span class="status-pill warn">Pending</span></td><td><a href="404.html" class="btn-sm">Edit</a></td></tr></tbody></table></div><button class="page-btn" onclick="location.href='404.html'"><i class="ph ph-user-plus"></i> Invite User</button></div>
+
+  <!-- DEVICES -->
+  <div class="page" id="page-devices"><h2 class="page-heading">Devices</h2><div class="table-wrap"><table class="data-table"><thead><tr><th>Device ID</th><th>Type</th><th>Site</th><th>Last Ping</th><th>Status</th></tr></thead><tbody><tr><td>GE-DEV-001</td><td>Inverter</td><td>Rajasthan</td><td>2m ago</td><td><span class="status-pill on">Online</span></td></tr><tr><td>GE-DEV-002</td><td>Sensor</td><td>Gujarat</td><td>1m ago</td><td><span class="status-pill on">Online</span></td></tr><tr><td>GE-DEV-003</td><td>Controller</td><td>Mumbai</td><td>4h ago</td><td><span class="status-pill warn">Offline</span></td></tr></tbody></table></div><button class="page-btn" onclick="location.href='404.html'"><i class="ph ph-plus"></i> Register Device</button></div>
+
+  <!-- REPORTS -->
+  <div class="page" id="page-reports"><h2 class="page-heading">Admin Reports</h2><div class="report-list"><div class="report-item"><i class="ph ph-file-text"></i><div><strong>Executive Summary — June 2025</strong><p>Full KPI breakdown</p></div><a href="404.html" class="btn-sm">Download</a></div><div class="report-item"><i class="ph ph-file-text"></i><div><strong>Compliance Report — Q1 2025</strong><p>Regulatory metrics</p></div><a href="404.html" class="btn-sm">Download</a></div><div class="report-item"><i class="ph ph-file-text"></i><div><strong>Financial Report — FY 2024</strong><p>Revenue & ROI</p></div><a href="404.html" class="btn-sm">Download</a></div></div><button class="page-btn" onclick="location.href='404.html'"><i class="ph ph-plus"></i> Generate Report</button></div>
+
+  <!-- BILLING (fixed grid) -->
+  <div class="page" id="page-billing">
+    <h2 class="page-heading">Billing</h2>
+    <div class="billing-metrics-grid">
+      <div class="metric-card green"><div class="metric-icon"><i class="ph ph-currency-dollar"></i></div><div class="metric-info"><div class="metric-val">₹84.2L</div><div class="metric-lbl">This Month</div></div></div>
+      <div class="metric-card blue"><div class="metric-icon"><i class="ph ph-receipt"></i></div><div class="metric-info"><div class="metric-val">12</div><div class="metric-lbl">Invoices Due</div></div></div>
+      <div class="metric-card teal"><div class="metric-icon"><i class="ph ph-check-circle"></i></div><div class="metric-info"><div class="metric-val">₹2.1Cr</div><div class="metric-lbl">YTD Revenue</div></div></div>
+    </div>
+    <button class="page-btn" onclick="location.href='404.html'"><i class="ph ph-receipt"></i> View Invoices</button>
+  </div>
+
+  <!-- LOGS -->
+  <div class="page" id="page-logs"><h2 class="page-heading">System Logs</h2><div class="log-terminal" id="logTerminal"></div><button class="page-btn" onclick="location.href='404.html'"><i class="ph ph-download-simple"></i> Export Logs</button></div>
+
+  <!-- SETTINGS -->
+  <div class="page" id="page-settings"><h2 class="page-heading">System Settings</h2><div class="settings-list"><div class="setting-row"><span>API Configuration</span><a href="404.html" class="btn-sm">Manage</a></div><div class="setting-row"><span>Email & Notifications</span><a href="404.html" class="btn-sm">Configure</a></div><div class="setting-row"><span>Data Retention Policy</span><a href="404.html" class="btn-sm">Configure</a></div><div class="setting-row"><span>Security & 2FA</span><a href="404.html" class="btn-sm">Manage</a></div><div class="setting-row"><span>Backup & Restore</span><a href="404.html" class="btn-sm">Manage</a></div><div class="setting-row"><span>Danger Zone</span><a href="404.html" class="btn-sm danger">Reset System</a></div></div></div>
+</main>
+
+<script src="dashboardadmin.js"></script>
+</body>
+</html>

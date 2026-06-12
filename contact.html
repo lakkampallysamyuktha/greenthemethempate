@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Contact Us — Stackly</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="logo-removebg-preview.webp" alt="Stackly" class="nav-logo-img">
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="login.html" class="nav-btn-login">Login</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="ham-line ham-top"></span>
+                <span class="ham-line ham-mid"></span>
+                <span class="ham-line ham-bot"></span>
+            </button>
+        </div>
+        <div class="nav-overlay" id="navOverlay"></div>
+    </nav>
+
+    <main style="position:relative; z-index:0;">
+
+    <!-- ===== HERO ===== -->
+    <section class="contact-hero">
+        <div class="contact-hero-overlay"></div>
+        <canvas class="hero-canvas" id="heroCanvas"></canvas>
+        <div class="contact-hero-content">
+            <span class="contact-eyebrow">
+                <span class="eyebrow-dot"></span>
+                Get in Touch
+            </span>
+            <h1>Let's Build a <em>Greener</em><br>Future Together</h1>
+            <p>Whether you need a quote, have a technical question, or want to partner with us — our team responds within 24 hours.</p>
+        </div>
+        <div class="contact-hero-scroll">
+            <span>Scroll</span>
+            <div class="scroll-arrow">
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+
+                <!-- Info Column -->
+                <div class="contact-info-col reveal-left">
+                    <span class="section-tag">Direct Contact</span>
+                    <h2>Reach Out<br><span>Directly</span></h2>
+                    <p>Connect with the right team. We'll match you to the expert best suited for your needs.</p>
+
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div class="info-content">
+                            <h4>Sales &amp; Consultations</h4>
+                            <a href="404.html">+1 (800) 123-4567</a>
+                            <span>Mon – Fri, 8 am – 6 pm EST</span>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fa-solid fa-headset"></i></div>
+                        <div class="info-content">
+                            <h4>Customer Support</h4>
+                            <a href="404.html">+1 (800) 987-HELP</a>
+                            <span>24 / 7 emergency support</span>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="info-content">
+                            <h4>General Inquiries</h4>
+                            <a href="404.html">hello@stackly.com</a>
+                            <span>Reply within 24 hours</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-social">
+                        <h4>Follow Our Journey</h4>
+                        <div class="social-links">
+                            <a href="404.html" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="404.html" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Column -->
+                <div class="contact-form-col reveal-right">
+                    <h3>Send us a Message</h3>
+                    <p>Fill out the form and we'll get back to you within one business day.</p>
+
+                    <form id="contactForm" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName" placeholder="John" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" placeholder="Doe" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone <span style="font-weight:400;color:var(--gray-400)">(optional)</span></label>
+                                <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="interest">I'm interested in</label>
+                            <div class="custom-select-wrapper">
+                                <select id="interest" name="interest">
+                                    <option value="residential-solar">Residential Solar</option>
+                                    <option value="commercial-solar">Commercial Solar</option>
+                                    <option value="wind-power">Wind Power Solutions</option>
+                                    <option value="battery">Battery Storage</option>
+                                    <option value="support">Technical Support</option>
+                                    <option value="other">Other Inquiry</option>
+                                </select>
+                                <i class="fa-solid fa-chevron-down select-icon"></i>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell us about your project or question…" required></textarea>
+                        </div>
+                        <div class="form-status" id="formStatus" role="alert" aria-live="polite"></div>
+                        <button type="submit" class="btn btn-primary btn-lg submit-btn">
+                            Send Message <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== LOCATIONS SECTION ===== -->
+    <section class="locations-section">
+        <div class="container">
+            <div class="section-header reveal-fade">
+                <span class="section-tag">Locations</span>
+                <h2>Our Global <span>Offices</span></h2>
+                <p>We operate worldwide. Find the team closest to you.</p>
+            </div>
+            <div class="locations-grid">
+                <!-- San Francisco -->
+                <div class="location-card reveal-up" style="--delay:0ms">
+                    <div class="location-img-wrap">
+                        <img src="contact1.webp" alt="San Francisco Office" loading="lazy">
+                        <span class="location-badge">Americas HQ</span>
+                    </div>
+                    <div class="location-info">
+                        <h3>San Francisco</h3>
+                        <p><i class="fa-solid fa-location-dot"></i> 1200 Stackly Tech Blvd, Suite 400<br>San Francisco, CA 94105, USA</p>
+                        <a href="404.html" class="text-link">Get Directions <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- London -->
+                <div class="location-card reveal-up" style="--delay:100ms">
+                    <div class="location-img-wrap">
+                        <img src="contact2.webp" alt="London Office" loading="lazy">
+                        <span class="location-badge">Europe HQ</span>
+                    </div>
+                    <div class="location-info">
+                        <h3>London</h3>
+                        <p><i class="fa-solid fa-location-dot"></i> 45 Sustainable Way, Innovation Park<br>London, E1 6AN, United Kingdom</p>
+                        <a href="404.html" class="text-link">Get Directions <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Tokyo -->
+                <div class="location-card reveal-up" style="--delay:200ms">
+                    <div class="location-img-wrap">
+                        <img src="contact3.webp" alt="Tokyo Office" loading="lazy">
+                        <span class="location-badge">Asia-Pacific HQ</span>
+                    </div>
+                    <div class="location-info">
+                        <h3>Tokyo</h3>
+                        <p><i class="fa-solid fa-location-dot"></i> Eco Tower, Floor 32, Minato City<br>Tokyo 105-0011, Japan</p>
+                        <a href="404.html" class="text-link">Get Directions <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SUPPORT SECTION ===== -->
+    <section class="support-section">
+        <div class="container">
+            <div class="section-header reveal-fade">
+                <span class="section-tag section-tag-light">Support</span>
+                <h2>How Can We <span style="color:var(--green-400)">Help You?</span></h2>
+                <p>Browse our resources before reaching out — most answers are already there.</p>
+            </div>
+            <div class="support-grid">
+                <div class="support-card reveal-up" style="--delay:0ms">
+                    <div class="support-icon"><i class="fa-solid fa-book-open"></i></div>
+                    <h4>Knowledge Base</h4>
+                    <p>Step-by-step guides, FAQs, and documentation for all our products.</p>
+                    <a href="404.html">Browse Articles <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="support-card reveal-up" style="--delay:80ms">
+                    <div class="support-icon"><i class="fa-solid fa-circle-play"></i></div>
+                    <h4>Video Tutorials</h4>
+                    <p>Watch our library of installation and setup walkthroughs.</p>
+                    <a href="404.html">Watch Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="support-card reveal-up" style="--delay:160ms">
+                    <div class="support-icon"><i class="fa-solid fa-comments"></i></div>
+                    <h4>Live Chat</h4>
+                    <p>Chat with a support agent in real time, Monday to Friday.</p>
+                    <a href="404.html">Start Chat <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="support-card reveal-up" style="--delay:240ms">
+                    <div class="support-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                    <h4>Book a Call</h4>
+                    <p>Schedule a free 30-minute consultation with one of our experts.</p>
+                    <a href="404.html">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                      <a href="index.html" class="footer-logo">
+                    <img src="logo-removebg-preview.webp" alt="Stackly" class="footer-logo-img">
+                </a>
+                    <p>Powering a sustainable future with innovative renewable energy solutions since 2009.</p>
+                    <div class="footer-social">
+                        <a href="404.html" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="404.html" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Solar Energy</a></li>
+                        <li><a href="services.html">Wind Energy</a></li>
+                        <li><a href="services.html">Hydro Power</a></li>
+                        <li><a href="services.html">Energy Storage</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Stay updated with Stackly news.</p>
+                    <div class="footer-newsletter">
+                        <input type="email" id="nlEmail" placeholder="Your email address" aria-label="Newsletter email">
+                        <button type="button" id="nlBtn"><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Stackly. All rights reserved. | <a href="404.html">Privacy Policy</a> | <a href="404.html">Terms</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <script src="contact.js"></script>
+</body>
+</html>
